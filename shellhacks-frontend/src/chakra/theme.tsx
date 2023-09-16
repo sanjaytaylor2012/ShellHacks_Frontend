@@ -15,8 +15,8 @@ const theme = extendTheme({
     Button: {
       variants: {
         main: {
-          bg: "#2c5e85", // Change the background color to red
-          _hover: { bg: "#225175", color: "#b0b0b0" },
+          bg: "#4f47e4", // Change the background color to red
+          _hover: { bg: "#34316b", color: "#b0b0b0" },
         },
       },
       // Base style

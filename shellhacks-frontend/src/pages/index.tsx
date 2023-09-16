@@ -16,7 +16,7 @@ export default function Home() {
         width="100%"
         pt={{ base: 8, md: "10vh" }}
         pb={{ base: 8, md: "10vh" }}
-        backgroundColor="#f0f0f0"
+        backgroundColor="black"
         align="center"
         direction={{ base: "column", md: "row" }}
       >
@@ -24,7 +24,7 @@ export default function Home() {
           <Flex flexWrap="wrap">
             <Text
               mr={3}
-              color="black"
+              color="ebebeb"
               fontFamily={"Roboto Condensed"}
               fontSize={40}
             >
@@ -32,7 +32,7 @@ export default function Home() {
             </Text>
             <Text
               mr={3}
-              color="black"
+              color="ebebeb"
               fontFamily={"Roboto Condensed"}
               fontSize={40}
             >
@@ -40,7 +40,7 @@ export default function Home() {
             </Text>
             <Text
               mr={3}
-              backgroundImage="linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,157,153,0.7989320728291316) 38%, rgba(44,153,236,0.6488413547237077) 62%);"
+              backgroundImage="linear-gradient(90deg, rgba(79,71,228,1) 0%, rgba(20,241,229,0.7989320728291316) 100%);"
               backgroundClip="text"
               color="transparent"
               fontWeight={800}
@@ -51,7 +51,7 @@ export default function Home() {
             </Text>
             <Text
               mr={3}
-              color="black"
+              color="ebebeb"
               fontFamily={"Roboto Condensed"}
               fontSize={40}
             >
@@ -59,17 +59,17 @@ export default function Home() {
             </Text>
             <Text
               mr={3}
-              backgroundImage="linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,157,153,0.7989320728291316) 38%, rgba(44,153,236,0.6488413547237077) 62%);"
+              backgroundImage="linear-gradient(90deg, rgba(79,71,228,1) 0%, rgba(20,241,229,0.7989320728291316) 100%);"
               backgroundClip="text"
               color="transparent"
               fontWeight={800}
               fontFamily={"DM Serif Text"}
               fontSize={40}
             >
-              Coach.ai
+              Sportify
             </Text>
-            <Text mt={4} color="#878787">
-              Coach.ai is an intelligent coach that leverages AI to give you
+            <Text mt={4} color="white">
+              Sportify is an intelligent coach that leverages AI to give you
               feedback on your sports performance. Upload a video and give it a
               try!
             </Text>
@@ -81,7 +81,7 @@ export default function Home() {
                 <Button
                   backgroundColor="#d9d9d9"
                   color="black"
-                  _hover={{ color: "#185c8f" }}
+                  _hover={{ color: "#4f47e4", backgroundColor: "#8c8c8c" }}
                 >
                   How it Works
                 </Button>
@@ -102,9 +102,10 @@ export default function Home() {
       </Flex>
       <Flex
         width="100%"
-        backgroundColor="#143a57"
-        direction={{ base: "column", md: "row" }}
+        backgroundColor="#343075"
+        direction={{ base: "column-reverse", md: "row" }}
       >
+        <Image width={{ base: "unset", md: "40%" }} src="runningGuy.png" />
         <Flex align="center" m={10} width={{ base: "unset", md: "60%" }}>
           <Stack>
             <Text id="technology" color="#878787" mb={-2}>
@@ -114,14 +115,14 @@ export default function Home() {
               Intelligent coaching, brought to you
             </Text>
             <Text color="#d6d6d6">
-              Coach.ai revolutionizes sports coaching through artificial
+              Sportify revolutionizes sports coaching through artificial
               intelligence. By uploading your performance videos, you can tap
               into a world of data-driven feedback, enhancing your skills and
               achieving your goals. We deciphers nuances in your technique,
               dissect your movements, and detect patterns in your performance
               that might have otherwise remained hidden. Every kick, every
               swing, every sprint – all are meticulously scrutinized by
-              Coach.ai's AI engine.
+              Sportify's AI engine.
             </Text>
             <Grid
               mt={4}
@@ -172,8 +173,6 @@ export default function Home() {
             </Grid>
           </Stack>
         </Flex>
-
-        <Image width={{ base: "unset", md: "40%" }} src="runningGuy.png" />
       </Flex>
     </>
   );

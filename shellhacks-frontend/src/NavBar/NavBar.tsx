@@ -9,14 +9,14 @@ const Navbar: React.FC<NavbarProps> = () => {
   const router = useRouter();
   return (
     <Flex
-      bg="white"
+      bg="#292929"
       height="55px"
       padding="10px 20px"
       align="center"
       justify={"space-between"}
     >
       <Text
-        backgroundImage="linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,157,153,0.7989320728291316) 38%, rgba(44,153,236,0.6488413547237077) 62%);"
+        backgroundImage="linear-gradient(90deg, rgba(79,71,228,1) 0%, rgba(20,241,229,0.7989320728291316) 100%);"
         fontSize={20}
         fontWeight={700}
         cursor="pointer"
@@ -25,7 +25,7 @@ const Navbar: React.FC<NavbarProps> = () => {
         color="transparent"
         fontFamily={"DM Serif Text"}
       >
-        Coach.ai
+        Sportify
       </Text>
       <Button onClick={() => router.push("/try")} variant={"main"}>
         Try Now

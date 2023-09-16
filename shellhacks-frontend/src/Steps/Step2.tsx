@@ -87,7 +87,7 @@ const Step2: React.FC<Step2Props> = ({
                 color="black"
                 _hover={{ color: "#185c8f" }}
               >
-                Select Different Video
+                Select a Different Video
               </Button>
               <Button
                 onClick={() => {
@@ -129,7 +129,7 @@ const Step2: React.FC<Step2Props> = ({
               setCurrentStep(1);
             }}
           >
-            Pick different Sport
+            TESTING BUTTON: Pick different Sport
           </Button>
           <Text align="center" mt={5} ml={12} mr={12} color="#828282">
             Upload a video of your {currentSport} form. Make sure you are taking
