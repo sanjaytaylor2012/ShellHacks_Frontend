@@ -1,6 +1,7 @@
 import { Button, Flex, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import React from "react";
+import "@fontsource/dm-serif-text";
 
 type NavbarProps = {};
 
@@ -15,17 +16,18 @@ const Navbar: React.FC<NavbarProps> = () => {
       justify={"space-between"}
     >
       <Text
-        backgroundImage="linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,157,153,0.23529411764705888) 38%, rgba(44,153,236,0.6488413547237077) 62%);"
+        backgroundImage="linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(87,157,153,0.7989320728291316) 38%, rgba(44,153,236,0.6488413547237077) 62%);"
         fontSize={20}
         fontWeight={700}
         cursor="pointer"
         onClick={() => router.push("/")}
         backgroundClip="text"
         color="transparent"
+        fontFamily={"DM Serif Text"}
       >
         Coach.ai
       </Text>
-      <Button backgroundColor="#2c99ec" _hover={{ color: "#185c8f" }}>
+      <Button onClick={() => router.push("/try")} variant={"main"}>
         Try Now
       </Button>
     </Flex>
