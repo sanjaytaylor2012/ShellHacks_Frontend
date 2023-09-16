@@ -101,7 +101,10 @@ const Step2: React.FC<Step2Props> = ({
             </Flex>
             <Stack ml={5} mr={5} mt={5} width={{ base: "200px", md: " 500px" }}>
               <Button
-                onClick={() => selectedFileRef.current?.click()}
+                onClick={() => {
+                  setSelectedFile(null);
+                  selectedFileRef.current?.click();
+                }}
                 backgroundColor="#d9d9d9"
                 color="black"
                 _hover={{ color: "#4f47e4", backgroundColor: "#8c8c8c" }}
@@ -111,11 +114,11 @@ const Step2: React.FC<Step2Props> = ({
               </Button>
               <Button
                 onClick={() => {
-                  // sendForm();
-                  setCurrentStep(3);
+                  sendForm();
+                  // setCurrentStep(3);
                 }}
-                // isLoading={backendLoading}
-                // isDisabled={isSelected ? false : true}
+                isLoading={backendLoading}
+                isDisabled={isSelected ? false : true}
                 variant={"main"}
               >
                 Confirm Video
