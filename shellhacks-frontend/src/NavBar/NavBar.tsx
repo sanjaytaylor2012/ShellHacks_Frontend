@@ -25,7 +25,7 @@ const Navbar: React.FC<NavbarProps> = () => {
         color="transparent"
         fontFamily={"DM Serif Text"}
       >
-        Sportify
+        AthleteAI
       </Text>
       <Button onClick={() => router.push("/try")} variant={"main"}>
         Try Now

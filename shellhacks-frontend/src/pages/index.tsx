@@ -66,10 +66,10 @@ export default function Home() {
               fontFamily={"DM Serif Text"}
               fontSize={40}
             >
-              Sportify
+              AthleteAI
             </Text>
             <Text mt={4} color="white">
-              Sportify is an intelligent coach that leverages AI to give you
+              AthleteAI is an intelligent coach that leverages AI to give you
               feedback on your sports performance. Upload a video and give it a
               try!
             </Text>
@@ -109,20 +109,20 @@ export default function Home() {
         <Flex align="center" m={10} width={{ base: "unset", md: "60%" }}>
           <Stack>
             <Text id="technology" color="#878787" mb={-2}>
-              TECHNOLOGY
+              INTELLIGENCE
             </Text>
             <Text fontSize={30} fontWeight={700}>
-              Intelligent coaching, brought to you
+              Smart coaching, at your fingertips.
             </Text>
             <Text color="#d6d6d6">
-              Sportify revolutionizes sports coaching through artificial
+              AthleteAI revolutionizes sports coaching through artificial
               intelligence. By uploading your performance videos, you can tap
               into a world of data-driven feedback, enhancing your skills and
               achieving your goals. We deciphers nuances in your technique,
               dissect your movements, and detect patterns in your performance
               that might have otherwise remained hidden. Every kick, every
               swing, every sprint – all are meticulously scrutinized by
-              Sportify's AI engine.
+              AthleteAI's AI engine.
             </Text>
             <Grid
               mt={4}
@@ -132,7 +132,7 @@ export default function Home() {
             >
               <Stack>
                 <Text fontWeight={700} mb={-2}>
-                  Live Webcam Analysis
+                  Real-Time Assessment
                 </Text>
                 <Text color="#d6d6d6" fontSize={13}>
                   Capture real-time video footage through your webcam and
@@ -142,7 +142,7 @@ export default function Home() {
               </Stack>
               <Stack>
                 <Text fontWeight={700} mb={-2}>
-                  Post-Performance Report
+                  Performance Analysis Report
                 </Text>
                 <Text color="#d6d6d6" fontSize={13}>
                   After your training or game, access a comprehensive analysis
@@ -162,12 +162,12 @@ export default function Home() {
               </Stack>
               <Stack>
                 <Text fontWeight={700} mb={-2}>
-                  Replayability
+                  Attention to Detail{" "}
                 </Text>
                 <Text color="#d6d6d6" fontSize={13}>
-                  Review your past sessions, analyze your progress, and relive
-                  your achievements with ease. This feature empowers you to
-                  continuously refine your skills.
+                  Through a meticulous analysis of your technique and form, we
+                  draw comparisons to the skills of Olympic-level athletes. This
+                  process allows us to identify areas for improvement.
                 </Text>
               </Stack>
             </Grid>

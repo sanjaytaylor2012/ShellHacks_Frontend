@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { isJSDocPropertyLikeTag } from "typescript";
 import "@fontsource/dm-serif-text";
 import StepObject from "./StepObject";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 type Step1Props = {
   setCurrentStep: (input: number) => void;
@@ -27,13 +29,74 @@ const Step1: React.FC<Step1Props> = ({
     setCurrentStep(2);
   };
 
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 10000, min: 3000 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+      slidesToSlide: 2, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
+
   return (
-    <Flex width={"100%"}>
-      <Stack width={{ base: "100%", lg: "30%" }} ml={10}>
-        <Text mb={4} color="black" fontWeight={700} fontSize={40}>
-          Select Your Sport
-        </Text>
+    <Flex width={"100%"} height="100%" justify="space-around" mb={5}>
+      <Stack ml={10} width={{ base: "100%", lg: "30%" }}>
+        {/* <Carousel
+          swipeable={true}
+          draggable={true}
+          showDots={true}
+          responsive={responsive}
+          // ssr={true} // means to render carousel on server-side.
+          infinite={true}
+          keyBoardControl={true}
+          customTransition="all .5"
+          transitionDuration={500}
+          containerClass="carousel-container"
+          removeArrowOnDeviceType={["tablet", "mobile"]}
+          // deviceType={this.props.deviceType}
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+        >
+          <StepObject sport={"Baseball"} />
+          <StepObject sport={"Basketball"} />
+          <StepObject sport={"Baseball"} />
+          <StepObject sport={"Basketball"} />
+          <StepObject sport={"Boxing"} />
+          <StepObject sport={"Clean and Jerk"} />
+          <StepObject sport={"Football"} />
+          <StepObject sport={"Golf Side View"} />
+          <StepObject sport={"Golf Back View"} />
+          <StepObject sport={"Push-ups"} />
+          <StepObject sport={"Running"} />
+          <StepObject sport={"Snatch"} />
+          <StepObject sport={"Squat"} />
+        </Carousel> */}
+        {/* </Flex> */}
         <Stack gap={-1}>
+          <Text
+            mb={4}
+            fontWeight={700}
+            fontSize={40}
+            backgroundImage="linear-gradient(90deg, rgba(79,71,228,1) 0%, rgba(20,241,229,0.7989320728291316) 100%);"
+            backgroundClip="text"
+            color="transparent"
+          >
+            Select Your Sport
+          </Text>
           <StepObject
             handleClick={handleClick}
             handleMouseEnter={handleMouseEnter}
@@ -52,12 +115,7 @@ const Step1: React.FC<Step1Props> = ({
             handleMouseLeave={handleMouseLeave}
             sport={"Boxing"}
           />
-          <StepObject
-            handleClick={handleClick}
-            handleMouseEnter={handleMouseEnter}
-            handleMouseLeave={handleMouseLeave}
-            sport={"Clean and Jerk"}
-          />
+
           <StepObject
             handleClick={handleClick}
             handleMouseEnter={handleMouseEnter}
@@ -76,17 +134,18 @@ const Step1: React.FC<Step1Props> = ({
             handleMouseLeave={handleMouseLeave}
             sport={"Golf Back View"}
           />
-          <StepObject
-            handleClick={handleClick}
-            handleMouseEnter={handleMouseEnter}
-            handleMouseLeave={handleMouseLeave}
-            sport={"Push-ups"}
-          />
+
           <StepObject
             handleClick={handleClick}
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             sport={"Running"}
+          />
+          <StepObject
+            handleClick={handleClick}
+            handleMouseEnter={handleMouseEnter}
+            handleMouseLeave={handleMouseLeave}
+            sport={"Push-ups"}
           />
           <StepObject
             handleClick={handleClick}
@@ -100,10 +159,16 @@ const Step1: React.FC<Step1Props> = ({
             handleMouseLeave={handleMouseLeave}
             sport={"Squat"}
           />
+          <StepObject
+            handleClick={handleClick}
+            handleMouseEnter={handleMouseEnter}
+            handleMouseLeave={handleMouseLeave}
+            sport={"Clean and Jerk"}
+          />
         </Stack>
       </Stack>
 
-      <Flex width="50%" mr="10%" mb={4} display={{ base: "none", lg: "flex" }}>
+      <Flex width="40%" mr="10%" mb={4} display={{ base: "none", lg: "flex" }}>
         {currentSport && (
           <Image objectFit="cover" src={`${currentSport}.png`} />
         )}

@@ -101,17 +101,18 @@ const Step2: React.FC<Step2Props> = ({
                 onClick={() => selectedFileRef.current?.click()}
                 backgroundColor="#d9d9d9"
                 color="black"
-                _hover={{ color: "#185c8f" }}
+                _hover={{ color: "#4f47e4", backgroundColor: "#8c8c8c" }}
                 isLoading={loading}
               >
                 Select a Different Video
               </Button>
               <Button
                 onClick={() => {
-                  sendForm();
+                  // sendForm();
+                  setCurrentStep(3);
                 }}
-                isLoading={backendLoading}
-                isDisabled={isSelected ? false : true}
+                // isLoading={backendLoading}
+                // isDisabled={isSelected ? false : true}
                 variant={"main"}
               >
                 Confirm Video
@@ -125,8 +126,8 @@ const Step2: React.FC<Step2Props> = ({
                 color="#828282"
               >
                 Upload a video of your {currentSport} form. Make sure you are
-                taking a clear angle of the activity such as the recommended
-                angle.
+                capturing a clear angle of the activity that matches the
+                recommended angle.
               </Text>
             </Stack>
           </Flex>
@@ -149,8 +150,9 @@ const Step2: React.FC<Step2Props> = ({
             TESTING BUTTON: Pick different Sport
           </Button>
           <Text align="center" mt={5} ml={12} mr={12} color="#828282">
-            Upload a video of your {currentSport} form. Make sure you are taking
-            a clear angle of the activity such as the recommended angle.
+            Upload a video of your {currentSport} form. Make sure you are
+            capturing a clear angle of the activity that matches the recommended
+            angle below.
           </Text>
 
           <Image

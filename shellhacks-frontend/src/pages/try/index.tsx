@@ -21,12 +21,12 @@ const index: React.FC<indexProps> = () => {
           borderRadius={"50%"}
           align="center"
           justify="center"
-          borderWidth={currentStep === 1 ? "3px" : "0px"}
+          borderWidth={currentStep === 1 ? "5px" : "0px"}
           borderColor={"#2c99ec"}
         >
           <Text color="black">1</Text>
         </Flex>
-        <Flex border="1px" borderColor={"black"} flexGrow={1}></Flex>
+        <Flex border="1px" borderColor={"white"} flexGrow={1}></Flex>
 
         <Flex
           width="40px"
@@ -35,12 +35,12 @@ const index: React.FC<indexProps> = () => {
           borderRadius={"50%"}
           align="center"
           justify="center"
-          borderWidth={currentStep === 2 ? "3px" : "0px"}
+          borderWidth={currentStep === 2 ? "5px" : "0px"}
           borderColor={"#2c99ec"}
         >
           <Text color="black">2</Text>
         </Flex>
-        <Flex border="1px" borderColor={"black"} flexGrow={1}></Flex>
+        <Flex border="1px" borderColor={"white"} flexGrow={1}></Flex>
 
         <Flex
           width="40px"
@@ -49,7 +49,7 @@ const index: React.FC<indexProps> = () => {
           borderRadius={"50%"}
           align="center"
           justify="center"
-          borderWidth={currentStep === 3 ? "3px" : "0px"}
+          borderWidth={currentStep === 3 ? "5px" : "0px"}
           borderColor={"#2c99ec"}
         >
           <Text color="black">3</Text>
