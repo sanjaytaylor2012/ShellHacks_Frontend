@@ -68,7 +68,12 @@ export default function Home() {
             >
               AthleteAI
             </Text>
-            <Text mt={4} color="white">
+            <Text
+              fontFamily={"Roboto Condensed"}
+              mt={4}
+              fontSize={20}
+              color="white"
+            >
               AthleteAI is an intelligent coach that leverages AI to give you
               feedback on your sports performance. Upload a video and give it a
               try!

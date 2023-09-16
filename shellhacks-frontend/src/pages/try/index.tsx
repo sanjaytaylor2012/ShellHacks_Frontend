@@ -64,13 +64,14 @@ const index: React.FC<indexProps> = () => {
       )}
       {currentStep === 2 && (
         <Step2
+          setResult={setResult}
           setCurrentStep={setCurrentStep}
           setSelectedFile={setSelectedFile}
           selectedFile={selectedFile}
           currentSport={currentSport}
         />
       )}
-      {currentStep === 3 && <Step3 />}
+      {currentStep === 3 && <Step3 result={result} />}
     </>
   );
 };

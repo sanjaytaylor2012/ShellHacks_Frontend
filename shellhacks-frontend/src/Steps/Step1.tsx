@@ -17,7 +17,7 @@ const Step1: React.FC<Step1Props> = ({
   currentSport,
 }) => {
   const handleMouseEnter = (sport: string) => {
-    setCurrentSport(sport);
+    setCurrentSport(sport.toLowerCase());
   };
 
   const handleMouseLeave = () => {

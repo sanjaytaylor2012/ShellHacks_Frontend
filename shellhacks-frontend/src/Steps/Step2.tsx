@@ -6,6 +6,7 @@ type Step2Props = {
   setSelectedFile: (input: string) => void;
   selectedFile: string | undefined;
   currentSport: string;
+  setResult: (input: any) => void;
 };
 
 const Step2: React.FC<Step2Props> = ({
@@ -13,6 +14,7 @@ const Step2: React.FC<Step2Props> = ({
   setSelectedFile,
   selectedFile,
   currentSport,
+  setResult,
 }) => {
   const selectedFileRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
@@ -68,6 +70,7 @@ const Step2: React.FC<Step2Props> = ({
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        setResult(data);
         setBackendLoading(false);
         setCurrentStep(3);
       });
@@ -139,7 +142,7 @@ const Step2: React.FC<Step2Props> = ({
             onClick={() => selectedFileRef.current?.click()}
             variant={"main"}
           >
-            Upload a ~10 second long video
+            Upload a ~5 second long video
           </Button>
           <Button
             variant={"main"}
@@ -161,7 +164,7 @@ const Step2: React.FC<Step2Props> = ({
             onLoad={checkImageOrientation}
             width={getDimensions("width")}
             height={getDimensions("height")}
-            src={`${currentSport}1.png`}
+            src={`${currentSport.toLowerCase()}1.png`}
           />
         </Stack>
       )}

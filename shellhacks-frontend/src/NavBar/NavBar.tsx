@@ -9,6 +9,10 @@ const Navbar: React.FC<NavbarProps> = () => {
   const router = useRouter();
   return (
     <Flex
+      zIndex={30000}
+      position={"fixed"}
+      top={0}
+      width="100%"
       bg="#292929"
       height="55px"
       padding="10px 20px"

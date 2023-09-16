@@ -2,14 +2,17 @@ import {
   CircularProgress,
   CircularProgressLabel,
   Flex,
+  Grid,
   Stack,
   Text,
+  Image,
 } from "@chakra-ui/react";
 import React from "react";
+import GraphObject from "./GraphObject";
 
-type Step3Props = { score: number };
+type Step3Props = { result: any };
 
-const Step3: React.FC<Step3Props> = ({ score }) => {
+const Step3: React.FC<Step3Props> = ({ score, result }) => {
   let colorCircle = "green.400";
   if (50 <= score && score < 75) {
     colorCircle = "yellow.300";
@@ -31,9 +34,56 @@ const Step3: React.FC<Step3Props> = ({ score }) => {
           <CircularProgressLabel>{score}</CircularProgressLabel>
         </CircularProgress>
         <Text align="center">
-          Your accuracy is at {score}%. Check out your similarity graphs to see
-          how close you matched the pros!
+          Your accuracy is {score}%. Check out your similarity graphs to see how
+          close you matched the pros!
         </Text>
+        <Grid
+          mt={4}
+          templateRows={{ base: "repeat(4, 1fr)", md: "repeat(2, 1fr)" }}
+          templateColumns={{ base: "repeat(2, 1fr)", md: "repeat(4, 1fr)" }}
+          gap={4} // Add gap between grid items (adjust as needed)
+        >
+          <GraphObject
+            name="Left arm angle"
+            graph="basketball1.png"
+            score={75}
+          />
+          <GraphObject
+            name="Left arm angle"
+            graph="basketball1.png"
+            score={75}
+          />
+          <GraphObject
+            name="Left arm angle"
+            graph="basketball1.png"
+            score={75}
+          />
+          <GraphObject
+            name="Left arm angle"
+            graph="basketball1.png"
+            score={75}
+          />
+          <GraphObject
+            name="Left arm angle"
+            graph="basketball1.png"
+            score={75}
+          />
+          <GraphObject
+            name="Left arm angle"
+            graph="basketball1.png"
+            score={75}
+          />
+          <GraphObject
+            name="Left arm angle"
+            graph="basketball1.png"
+            score={75}
+          />
+          <GraphObject
+            name="Left arm angle"
+            graph="basketball1.png"
+            score={75}
+          />
+        </Grid>
       </Stack>
     </Flex>
   );
