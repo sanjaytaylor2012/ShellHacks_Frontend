@@ -10,7 +10,7 @@ const index: React.FC<indexProps> = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [currentSport, setCurrentSport] = useState("");
   const [selectedFile, setSelectedFile] = useState<string>();
-
+  const [result, setResult] = useState();
   return (
     <>
       <Flex m={10} align="center" justify={"space-around"}>

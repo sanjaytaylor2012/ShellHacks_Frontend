@@ -18,6 +18,7 @@ const Step2: React.FC<Step2Props> = ({
   const [loading, setLoading] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
   const [isPortrait, setIsPortrait] = useState(false);
+  const [backendLoading, setBackendLoading] = useState(false);
 
   const onSelectVideo = (event: React.ChangeEvent<HTMLInputElement>) => {
     setLoading(true);
@@ -57,6 +58,21 @@ const Step2: React.FC<Step2Props> = ({
     }
   };
 
+  const sendForm = async () => {
+    setBackendLoading(true);
+    await fetch("http://127.0.0.1:5000/upload", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ currentSport, selectedFile }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        setBackendLoading(false);
+        setCurrentStep(3);
+      });
+  };
+
   return (
     <Stack align="center" justify={"center"} mt={20} width="100%" height="100%">
       <input
@@ -86,14 +102,15 @@ const Step2: React.FC<Step2Props> = ({
                 backgroundColor="#d9d9d9"
                 color="black"
                 _hover={{ color: "#185c8f" }}
+                isLoading={loading}
               >
                 Select a Different Video
               </Button>
               <Button
                 onClick={() => {
-                  setCurrentStep(3);
+                  sendForm();
                 }}
-                isLoading={loading}
+                isLoading={backendLoading}
                 isDisabled={isSelected ? false : true}
                 variant={"main"}
               >
