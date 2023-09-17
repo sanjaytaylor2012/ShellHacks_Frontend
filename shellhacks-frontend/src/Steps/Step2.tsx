@@ -19,7 +19,6 @@ const Step2: React.FC<Step2Props> = ({
   const selectedFileRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
-  const [isPortrait, setIsPortrait] = useState(false);
   const [backendLoading, setBackendLoading] = useState(false);
 
   const onSelectVideo = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,25 +39,7 @@ const Step2: React.FC<Step2Props> = ({
     };
   };
 
-  const checkImageOrientation = () => {
-    const img = document.getElementById("myImage"); // Replace with your image ID or reference
-    if (img) {
-      const { naturalWidth, naturalHeight } = img;
-      setIsPortrait(naturalHeight > naturalWidth);
-    }
-  };
 
-  const getDimensions = (dimension: string) => {
-    if (isPortrait && dimension == "height") {
-      return { base: "500px", md: "600px" };
-    } else if (isPortrait && dimension == "width") {
-      return { base: "flex", md: "flex" };
-    } else if (isPortrait === false && dimension == "width") {
-      return { base: "500px", md: "600px" };
-    } else if (isPortrait && dimension == "height") {
-      return { base: "flex", md: "flex" };
-    }
-  };
 
   const sendForm = async () => {
     setBackendLoading(true);
@@ -90,9 +71,10 @@ const Step2: React.FC<Step2Props> = ({
             justify={"space-around"}
             direction={{ base: "column", md: "row" }}
           >
-            <Flex width={{ base: "80%", md: "50%" }}>
+            <Flex maxWidth={"400px"} maxHeight={"500px"}>
               {selectedFile && (
-                <video controls>
+                <video
+                 controls>
                   <source src={selectedFile} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -143,14 +125,7 @@ const Step2: React.FC<Step2Props> = ({
           >
             Upload a ~10 second long video
           </Button>
-          <Button
-            variant={"main"}
-            onClick={() => {
-              setCurrentStep(1);
-            }}
-          >
-            TESTING BUTTON: Pick different Sport
-          </Button>
+
           <Text align="center" mt={5} ml={12} mr={12} color="#828282">
             Upload a video of your {currentSport} form. Make sure you are
             capturing a clear angle of the activity that matches the recommended
@@ -160,9 +135,7 @@ const Step2: React.FC<Step2Props> = ({
           <Image
             id="myImage"
             m={5}
-            onLoad={checkImageOrientation}
-            width={getDimensions("width")}
-            height={getDimensions("height")}
+            maxWidth={"500px"} maxHeight={"500px"}
             src={`${currentSport.toLowerCase()}1.png`}
           />
         </Stack>
