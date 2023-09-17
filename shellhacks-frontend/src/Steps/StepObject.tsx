@@ -30,6 +30,7 @@ const StepObject: React.FC<StepObjectProps> = ({
     //   </Text>
     // </Stack>
     <Text
+        color={"white"}
       fontSize={30}
       _hover={{ color: "#3830d1" }}
       fontFamily={"DM Serif Text"}

@@ -71,7 +71,7 @@ const index: React.FC<indexProps> = () => {
           currentSport={currentSport}
         />
       )}
-      {currentStep === 3 && <Step3 result={result} />}
+      {currentStep === 3 && <Step3 result={result} setResult={setResult} />}
     </>
   );
 };

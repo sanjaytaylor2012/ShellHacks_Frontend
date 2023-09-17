@@ -2,11 +2,11 @@ import { Button, Flex, Stack, Text, Image } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
 
 type Step2Props = {
+  setResult: (input: any) => void;
   setCurrentStep: (input: number) => void;
   setSelectedFile: (input: string) => void;
   selectedFile: string | undefined;
   currentSport: string;
-  setResult: (input: any) => void;
 };
 
 const Step2: React.FC<Step2Props> = ({
@@ -14,7 +14,7 @@ const Step2: React.FC<Step2Props> = ({
   setSelectedFile,
   selectedFile,
   currentSport,
-  setResult,
+    setResult
 }) => {
   const selectedFileRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
@@ -69,9 +69,8 @@ const Step2: React.FC<Step2Props> = ({
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
-        setResult(data);
         setBackendLoading(false);
+        setResult(data);
         setCurrentStep(3);
       });
   };
@@ -101,10 +100,7 @@ const Step2: React.FC<Step2Props> = ({
             </Flex>
             <Stack ml={5} mr={5} mt={5} width={{ base: "200px", md: " 500px" }}>
               <Button
-                onClick={() => {
-                  setSelectedFile(null);
-                  selectedFileRef.current?.click();
-                }}
+                onClick={() => selectedFileRef.current?.click()}
                 backgroundColor="#d9d9d9"
                 color="black"
                 _hover={{ color: "#4f47e4", backgroundColor: "#8c8c8c" }}
@@ -145,7 +141,7 @@ const Step2: React.FC<Step2Props> = ({
             onClick={() => selectedFileRef.current?.click()}
             variant={"main"}
           >
-            Upload a ~5 second long video
+            Upload a ~10 second long video
           </Button>
           <Button
             variant={"main"}

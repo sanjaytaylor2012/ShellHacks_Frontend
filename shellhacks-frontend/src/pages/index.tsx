@@ -24,7 +24,7 @@ export default function Home() {
           <Flex flexWrap="wrap">
             <Text
               mr={3}
-              color="ebebeb"
+              color="#ebebeb"
               fontFamily={"Roboto Condensed"}
               fontSize={40}
             >
@@ -32,7 +32,7 @@ export default function Home() {
             </Text>
             <Text
               mr={3}
-              color="ebebeb"
+              color="#ebebeb"
               fontFamily={"Roboto Condensed"}
               fontSize={40}
             >
@@ -51,7 +51,7 @@ export default function Home() {
             </Text>
             <Text
               mr={3}
-              color="ebebeb"
+              color="#ebebeb"
               fontFamily={"Roboto Condensed"}
               fontSize={40}
             >
@@ -116,7 +116,7 @@ export default function Home() {
             <Text id="technology" color="#878787" mb={-2}>
               INTELLIGENCE
             </Text>
-            <Text fontSize={30} fontWeight={700}>
+            <Text color={"white"} fontSize={30} fontWeight={700}>
               Smart coaching, at your fingertips.
             </Text>
             <Text color="#d6d6d6">
@@ -136,7 +136,7 @@ export default function Home() {
               gap={4} // Add gap between grid items (adjust as needed)
             >
               <Stack>
-                <Text fontWeight={700} mb={-2}>
+                <Text color={"white"} fontWeight={700} mb={-2}>
                   Real-Time Assessment
                 </Text>
                 <Text color="#d6d6d6" fontSize={13}>
@@ -146,7 +146,7 @@ export default function Home() {
                 </Text>
               </Stack>
               <Stack>
-                <Text fontWeight={700} mb={-2}>
+                <Text color={"white"} fontWeight={700} mb={-2}>
                   Performance Analysis Report
                 </Text>
                 <Text color="#d6d6d6" fontSize={13}>
@@ -156,7 +156,7 @@ export default function Home() {
                 </Text>
               </Stack>
               <Stack>
-                <Text fontWeight={700} mb={-2}>
+                <Text color={"white"} fontWeight={700} mb={-2}>
                   Multi-Sport Support
                 </Text>
                 <Text color="#d6d6d6" fontSize={13}>
@@ -166,7 +166,7 @@ export default function Home() {
                 </Text>
               </Stack>
               <Stack>
-                <Text fontWeight={700} mb={-2}>
+                <Text color={"white"} fontWeight={700} mb={-2}>
                   Attention to Detail{" "}
                 </Text>
                 <Text color="#d6d6d6" fontSize={13}>
