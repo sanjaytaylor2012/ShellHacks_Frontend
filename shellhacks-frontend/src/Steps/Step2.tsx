@@ -14,7 +14,7 @@ const Step2: React.FC<Step2Props> = ({
   setSelectedFile,
   selectedFile,
   currentSport,
-    setResult
+  setResult,
 }) => {
   const selectedFileRef = useRef<HTMLInputElement>(null);
   const [loading, setLoading] = useState(false);
@@ -39,11 +39,11 @@ const Step2: React.FC<Step2Props> = ({
     };
   };
 
-
+  // http://127.0.0.1:5000/
 
   const sendForm = async () => {
     setBackendLoading(true);
-    await fetch("http://127.0.0.1:5000/upload", {
+    await fetch("https://shellhacks.azurewebsites.net/upload", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ currentSport, selectedFile }),
@@ -73,8 +73,7 @@ const Step2: React.FC<Step2Props> = ({
           >
             <Flex maxWidth={"400px"} maxHeight={"500px"}>
               {selectedFile && (
-                <video
-                 controls>
+                <video controls>
                   <source src={selectedFile} type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
@@ -135,7 +134,8 @@ const Step2: React.FC<Step2Props> = ({
           <Image
             id="myImage"
             m={5}
-            maxWidth={"500px"} maxHeight={"500px"}
+            maxWidth={"500px"}
+            maxHeight={"500px"}
             src={`${currentSport.toLowerCase()}1.png`}
           />
         </Stack>
