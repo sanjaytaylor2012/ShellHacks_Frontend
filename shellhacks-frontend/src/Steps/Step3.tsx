@@ -71,7 +71,7 @@ const Step3: React.FC<Step3Props> = ({ result, currentSport }) => {
         "right waist bend angle" : "You may be over striding. Your strides may be exerting force at an angle, negatively effecting your speed and costing more energy",
       }
     },
-    "Golf side view" : {
+    "Golf Side View" : {
       "good" : {
         "left arm angle" : "This means that you keep your arms close to your chest, reducing the amount of variability in your swing.",
         "left arm bend angle" : "If you are right-handed, you are keeping your arm fully extending, improving your ability to compress the ball. If you are left-handed, you are maintaining a smooth and straight takeaway.",
@@ -94,7 +94,7 @@ const Step3: React.FC<Step3Props> = ({ result, currentSport }) => {
         "right waist bend angle" : "",
       }
     },
-    "Golf front view" : {
+    "Golf Back View" : {
       "good" : {
         "left arm angle" : "This means that you keep your arms close to your chest, reducing the amount of variability in your swing.",
         "left arm bend angle" : "If you are right-handed, you are keeping your arm fully extending, improving your ability to compress the ball. If you are left-handed, you are maintaining a smooth and straight takeaway.",
@@ -139,32 +139,86 @@ const Step3: React.FC<Step3Props> = ({ result, currentSport }) => {
         "right leg bend angle" : "You probably are not bending your knees enough.",
         "right waist bend angle" : "You probably are bending your waist too much or too little.",
       }
-    }, "Baseball" : {
-      "good" : {
-        "left arm angle" : "You are holding the barbell properly!",
-        "left arm bend angle" : "You are supporting the barbell securely!",
-        "left leg bend angle" : "You are bending your knees the propper amount!",
-        "left waist bend angle" : "You are bending your waist the optimal amount!",
-        "right arm angle" : "You are holding the barbell properly!",
-        "right arm bend angle" : "You are supporting the barbell securely!",
-        "right leg bend angle" : "You are bending your knees the propper amount!",
-        "right waist bend angle" : "You are bending your waist the optimal amount!",
-
-      },
-      "bad" : {
-        "left arm angle" : "You should have your arms pointing down to support the barbell better.",
-        "left arm bend angle" : "You should have your arms pointing down to support the barbell better.",
-        "left leg bend angle" : "You probably are not bending your knees enough.",
-        "left waist bend angle" : "You probably are bending your waist too much or too little.",
-        "right arm angle" : "You should have your arms pointing down to support the barbell better.",
-        "right arm bend angle" : "You should have your arms pointing down to support the barbell better.",
-        "right leg bend angle" : "You probably are not bending your knees enough.",
-        "right waist bend angle" : "You probably are bending your waist too much or too little.",
-      }
-    },
-
-
-
+    }, 'Football': {'good': {'left arm angle': 'Your left arm angle during football is well-positioned, aiding in optimal performance.',
+        'left arm bend angle': 'Your left arm bend angle during football is well-positioned, aiding in optimal performance.',
+        'left leg bend angle': 'Your left leg bend angle during football is well-positioned, aiding in optimal performance.',
+        'left waist bend angle': 'Your left waist bend angle during football is well-positioned, aiding in optimal performance.',
+        'right arm angle': 'Your right arm angle during football is well-positioned, aiding in optimal performance.',
+        'right arm bend angle': 'Your right arm bend angle during football is well-positioned, aiding in optimal performance.',
+        'right leg bend angle': 'Your right leg bend angle during football is well-positioned, aiding in optimal performance.',
+        'right waist bend angle': 'Your right waist bend angle during football is well-positioned, aiding in optimal performance.'},
+      'bad': {'left arm angle': 'Adjusting your left arm angle might enhance your football technique.',
+        'left arm bend angle': 'Adjusting your left arm bend angle might enhance your football technique.',
+        'left leg bend angle': 'Adjusting your left leg bend angle might enhance your football technique.',
+        'left waist bend angle': 'Adjusting your left waist bend angle might enhance your football technique.',
+        'right arm angle': 'Adjusting your right arm angle might enhance your football technique.',
+        'right arm bend angle': 'Adjusting your right arm bend angle might enhance your football technique.',
+        'right leg bend angle': 'Adjusting your right leg bend angle might enhance your football technique.',
+        'right waist bend angle': 'Adjusting your right waist bend angle might enhance your football technique.'}},
+    'Push-ups': {'good': {'left arm angle': 'Your left arm angle during push-ups is well-positioned, aiding in optimal performance.',
+        'left arm bend angle': 'Your left arm bend angle during push-ups is well-positioned, aiding in optimal performance.',
+        'left leg bend angle': 'Your left leg bend angle during push-ups is well-positioned, aiding in optimal performance.',
+        'left waist bend angle': 'Your left waist bend angle during push-ups is well-positioned, aiding in optimal performance.',
+        'right arm angle': 'Your right arm angle during push-ups is well-positioned, aiding in optimal performance.',
+        'right arm bend angle': 'Your right arm bend angle during push-ups is well-positioned, aiding in optimal performance.',
+        'right leg bend angle': 'Your right leg bend angle during push-ups is well-positioned, aiding in optimal performance.',
+        'right waist bend angle': 'Your right waist bend angle during push-ups is well-positioned, aiding in optimal performance.'},
+      'bad': {'left arm angle': 'Adjusting your left arm angle might enhance your push-ups technique.',
+        'left arm bend angle': 'Adjusting your left arm bend angle might enhance your push-ups technique.',
+        'left leg bend angle': 'Adjusting your left leg bend angle might enhance your push-ups technique.',
+        'left waist bend angle': 'Adjusting your left waist bend angle might enhance your push-ups technique.',
+        'right arm angle': 'Adjusting your right arm angle might enhance your push-ups technique.',
+        'right arm bend angle': 'Adjusting your right arm bend angle might enhance your push-ups technique.',
+        'right leg bend angle': 'Adjusting your right leg bend angle might enhance your push-ups technique.',
+        'right waist bend angle': 'Adjusting your right waist bend angle might enhance your push-ups technique.'}},
+    'Snatch': {'good': {'left arm angle': 'Your left arm angle during snatch is well-positioned, aiding in optimal performance.',
+        'left arm bend angle': 'Your left arm bend angle during snatch is well-positioned, aiding in optimal performance.',
+        'left leg bend angle': 'Your left leg bend angle during snatch is well-positioned, aiding in optimal performance.',
+        'left waist bend angle': 'Your left waist bend angle during snatch is well-positioned, aiding in optimal performance.',
+        'right arm angle': 'Your right arm angle during snatch is well-positioned, aiding in optimal performance.',
+        'right arm bend angle': 'Your right arm bend angle during snatch is well-positioned, aiding in optimal performance.',
+        'right leg bend angle': 'Your right leg bend angle during snatch is well-positioned, aiding in optimal performance.',
+        'right waist bend angle': 'Your right waist bend angle during snatch is well-positioned, aiding in optimal performance.'},
+      'bad': {'left arm angle': 'Adjusting your left arm angle might enhance your snatch technique.',
+        'left arm bend angle': 'Adjusting your left arm bend angle might enhance your snatch technique.',
+        'left leg bend angle': 'Adjusting your left leg bend angle might enhance your snatch technique.',
+        'left waist bend angle': 'Adjusting your left waist bend angle might enhance your snatch technique.',
+        'right arm angle': 'Adjusting your right arm angle might enhance your snatch technique.',
+        'right arm bend angle': 'Adjusting your right arm bend angle might enhance your snatch technique.',
+        'right leg bend angle': 'Adjusting your right leg bend angle might enhance your snatch technique.',
+        'right waist bend angle': 'Adjusting your right waist bend angle might enhance your snatch technique.'}},
+    'Clean and Jerk': {'good': {'left arm angle': 'Your left arm angle during clean and jerk is well-positioned, aiding in optimal performance.',
+        'left arm bend angle': 'Your left arm bend angle during clean and jerk is well-positioned, aiding in optimal performance.',
+        'left leg bend angle': 'Your left leg bend angle during clean and jerk is well-positioned, aiding in optimal performance.',
+        'left waist bend angle': 'Your left waist bend angle during clean and jerk is well-positioned, aiding in optimal performance.',
+        'right arm angle': 'Your right arm angle during clean and jerk is well-positioned, aiding in optimal performance.',
+        'right arm bend angle': 'Your right arm bend angle during clean and jerk is well-positioned, aiding in optimal performance.',
+        'right leg bend angle': 'Your right leg bend angle during clean and jerk is well-positioned, aiding in optimal performance.',
+        'right waist bend angle': 'Your right waist bend angle during clean and jerk is well-positioned, aiding in optimal performance.'},
+      'bad': {'left arm angle': 'Adjusting your left arm angle might enhance your clean and jerk technique.',
+        'left arm bend angle': 'Adjusting your left arm bend angle might enhance your clean and jerk technique.',
+        'left leg bend angle': 'Adjusting your left leg bend angle might enhance your clean and jerk technique.',
+        'left waist bend angle': 'Adjusting your left waist bend angle might enhance your clean and jerk technique.',
+        'right arm angle': 'Adjusting your right arm angle might enhance your clean and jerk technique.',
+        'right arm bend angle': 'Adjusting your right arm bend angle might enhance your clean and jerk technique.',
+        'right leg bend angle': 'Adjusting your right leg bend angle might enhance your clean and jerk technique.',
+        'right waist bend angle': 'Adjusting your right waist bend angle might enhance your clean and jerk technique.'}},
+    'Baseball': {'good': {'left arm angle': 'Your left arm angle during baseball is well-positioned, aiding in optimal performance.',
+        'left arm bend angle': 'Your left arm bend angle during baseball is well-positioned, aiding in optimal performance.',
+        'left leg bend angle': 'Your left leg bend angle during baseball is well-positioned, aiding in optimal performance.',
+        'left waist bend angle': 'Your left waist bend angle during baseball is well-positioned, aiding in optimal performance.',
+        'right arm angle': 'Your right arm angle during baseball is well-positioned, aiding in optimal performance.',
+        'right arm bend angle': 'Your right arm bend angle during baseball is well-positioned, aiding in optimal performance.',
+        'right leg bend angle': 'Your right leg bend angle during baseball is well-positioned, aiding in optimal performance.',
+        'right waist bend angle': 'Your right waist bend angle during baseball is well-positioned, aiding in optimal performance.'},
+      'bad': {'left arm angle': 'Adjusting your left arm angle might enhance your baseball technique.',
+        'left arm bend angle': 'Adjusting your left arm bend angle might enhance your baseball technique.',
+        'left leg bend angle': 'Adjusting your left leg bend angle might enhance your baseball technique.',
+        'left waist bend angle': 'Adjusting your left waist bend angle might enhance your baseball technique.',
+        'right arm angle': 'Adjusting your right arm angle might enhance your baseball technique.',
+        'right arm bend angle': 'Adjusting your right arm bend angle might enhance your baseball technique.',
+        'right leg bend angle': 'Adjusting your right leg bend angle might enhance your baseball technique.',
+        'right waist bend angle': 'Adjusting your right waist bend angle might enhance your baseball technique.'}}
   }
 
 
@@ -186,11 +240,13 @@ const Step3: React.FC<Step3Props> = ({ result, currentSport }) => {
           Your accuracy is {Math.round(result["overall_score"]* 100)}%. Check out your similarity graphs to see how
           close you matched the pros!
         </Text>
+        <Flex maxWidth={"400px"} maxHeight={"500px"}>
+
         <video controls>
           <source src={result["annotated"]} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-
+    </Flex>
         <Grid
           mt={4}
           templateRows={{ base: "repeat(4, 1fr)", md: "repeat(2, 1fr)" }}

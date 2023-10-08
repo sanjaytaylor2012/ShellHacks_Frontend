@@ -91,13 +91,6 @@ const Step1: React.FC<Step1Props> = ({
             handleClick={handleClick}
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
-            sport={"Boxing"}
-          />
-
-          <StepObject
-            handleClick={handleClick}
-            handleMouseEnter={handleMouseEnter}
-            handleMouseLeave={handleMouseLeave}
             sport={"Football"}
           />
           <StepObject
@@ -135,12 +128,6 @@ const Step1: React.FC<Step1Props> = ({
             handleClick={handleClick}
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
-            sport={"Squat"}
-          />
-          <StepObject
-            handleClick={handleClick}
-            handleMouseEnter={handleMouseEnter}
-            handleMouseLeave={handleMouseLeave}
             sport={"Clean and Jerk"}
           />
         </Stack>
@@ -148,7 +135,7 @@ const Step1: React.FC<Step1Props> = ({
 
       <Flex width="40%" mr="10%" mb={4} display={{ base: "none", lg: "flex" }}>
         {currentSport && (
-          <Image objectFit="cover" src={`${currentSport}.png`} />
+          <Image objectFit="cover" src={`/static/${currentSport}.png`} />
         )}
       </Flex>
     </Flex>

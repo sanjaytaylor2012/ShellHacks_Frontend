@@ -1,5 +1,6 @@
 import { Button, Flex, Stack, Text, Image } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
+import * as process from 'process';
 
 type Step2Props = {
   setResult: (input: any) => void;
@@ -32,7 +33,6 @@ const Step2: React.FC<Step2Props> = ({
     reader.onload = (readerEvent) => {
       if (readerEvent.target?.result) {
         setSelectedFile(readerEvent.target.result as string);
-        console.log(readerEvent.target.result as string);
         setIsSelected(true);
         setLoading(false);
       }
@@ -43,7 +43,8 @@ const Step2: React.FC<Step2Props> = ({
 
   const sendForm = async () => {
     setBackendLoading(true);
-    await fetch("http://127.0.0.1:5000/upload", {
+
+    await fetch("/upload", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ currentSport, selectedFile }),
@@ -136,7 +137,7 @@ const Step2: React.FC<Step2Props> = ({
             id="myImage"
             m={5}
             maxWidth={"500px"} maxHeight={"500px"}
-            src={`${currentSport.toLowerCase()}1.png`}
+            src={`/static/${currentSport.toLowerCase()}1.png`}
           />
         </Stack>
       )}

@@ -99,7 +99,7 @@ export default function Home() {
           <Box
             m={10}
             as="iframe"
-            src={"https://www.youtube.com/embed/qXuP9bv_LYU"}
+            src={"https://www.youtube.com/embed/0Pn49JXbd8Y"}
             width={{ base: "373", md: "500px" }}
             height={{ base: "210", md: "315" }}
           ></Box>
@@ -110,7 +110,7 @@ export default function Home() {
         backgroundColor="#343075"
         direction={{ base: "column-reverse", md: "row" }}
       >
-        <Image width={{ base: "unset", md: "40%" }} src="runningGuy.png" />
+        <Image width={{ base: "unset", md: "40%" }} src="/static/runningGuy.png" />
         <Flex align="center" m={10} width={{ base: "unset", md: "60%" }}>
           <Stack>
             <Text id="technology" color="#878787" mb={-2}>
